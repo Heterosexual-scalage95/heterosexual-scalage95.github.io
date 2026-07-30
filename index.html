@@ -7,7 +7,12 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
+            /* Фон: сначала цвет, потом картинка */
             background-color: #050505;
+            background-image: url('https://unlimbot.hb.ru-msk.vkcloud-storage.ru/image/4/019fb3df-1295-76ae-87ca-792cd18af628-908ddf7998f94302b29245e7f4952ca4.jpg');
+            background-size: cover;       /* Растянуть на весь экран без искажений */
+            background-position: center;  /* Центрировать картинку */
+            background-repeat: no-repeat; /* Не повторять */
             color: #fff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
@@ -64,7 +69,6 @@
         .center-btn-container {
             flex: 1;
             text-align: center;
-            /* Этот margin-top приподнимает центральную кнопку, как ты просил */
             margin-top: -10px; 
         }
 
@@ -124,7 +128,7 @@
             }
             .center-btn-container {
                 width: 100%;
-                margin-top: 20px; /* На мобильном убираем приподнимание, чтобы не было дыр */
+                margin-top: 20px;
             }
             .logo-big { font-size: 80px; }
             h1 { font-size: 22px; }
