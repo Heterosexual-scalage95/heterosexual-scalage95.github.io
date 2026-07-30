@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVEREST ONLINE | CRMP Проект</title>
+    <title>EVEREST ONLINE</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -13,10 +13,12 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
-        /* Шапка с логотипом */
+        /* Логотип и заголовок */
         .header {
+            width: 100%;
             padding: 60px 20px;
             text-align: center;
         }
@@ -52,7 +54,6 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            margin-top: auto; /* Прижимает кнопки к низу экрана, если контента мало */
         }
 
         /* Группы кнопок */
@@ -63,11 +64,11 @@
         .center-btn-container {
             flex: 1;
             text-align: center;
-            /* Приподнимаем центральную кнопку на 10px */
+            /* Этот margin-top приподнимает центральную кнопку, как ты просил */
             margin-top: -10px; 
         }
 
-        /* Обычные кнопки (Форум, Правила, Донат, Контакты) */
+        /* Обычные кнопки (плоские, не слипаются) */
         .btn-flat {
             padding: 14px 24px;
             background: #1a1a1a;
@@ -111,16 +112,6 @@
             box-shadow: 0 0 35px rgba(255, 87, 34, 0.8);
         }
 
-        /* Футер */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #555;
-            font-size: 14px;
-            margin-top: auto;
-            border-top: 1px solid #222;
-        }
-
         /* Адаптив под телефон */
         @media (max-width: 600px) {
             .buttons-wrapper {
@@ -156,7 +147,7 @@
 
         <!-- Центр: Скачать лаунчер (чуть приподнят) -->
         <div class="center-btn-container">
-            <a href="launcher.apk" class="btn-main" download>Скачать лаунчер</a>
+            <a href="pravila.html" class="btn-main">Скачать лаунчер</a>
         </div>
 
         <!-- Правая группа: Донат, Контакты -->
@@ -165,9 +156,5 @@
             <a href="#" class="btn-flat">Контакты</a>
         </div>
     </div>
-
-    <footer>
-        &copy; 2026 EVEREST ONLINE. Все права защищены.
-    </footer>
 </body>
 </html>
