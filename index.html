@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVEREST ONLINE</title>
+    <title>EVEREST ONLINE | CRMP Проект</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -13,62 +13,82 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; width: 100%; }
 
-        /* Логотип и заголовок */
-        .header {
-            width: 100%;
-            padding: 60px 20px;
+        /* --- СТИЛИ ДЛЯ ФОТО (ГЛАВНЫЙ БАННЕР) --- */
+        .hero-section {
+            flex-grow: 1; /* Прижимает футер вниз, если контента мало */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-        }
-        .logo-big {
-            font-size: 110px;
-            font-weight: 900;
-            color: #FF5722;
-            line-height: 0.9;
-            text-transform: uppercase;
-            letter-spacing: -5px;
-            filter: drop-shadow(0 0 15px rgba(255, 87, 34, 0.6));
-        }
-        h1 {
-            font-size: 28px;
-            color: #ffffff;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-        p.subtitle {
-            color: #999;
-            margin-top: 10px;
-            font-size: 15px;
+            padding: 40px 20px;
+            position: relative;
         }
 
-        /* Контейнер кнопок */
-        .buttons-wrapper {
+        .hero-image-wrapper {
             width: 100%;
-            max-width: 900px;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            max-width: 1200px; /* Ограничиваем ширину на больших экранах */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+            border: 1px solid #333;
         }
 
-        /* Группы кнопок */
-        .group {
+        .hero-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: brightness(0.9) contrast(1.1); /* Чуть затемняем, чтобы текст читался лучше */
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-wrapper img:hover {
+            transform: scale(1.02); /* Легкий зум при наведении */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            margin: 0 auto;
+            border-top: 2px solid #FF5722;
+        }
+
+        .hero-title {
+            font-size: 36px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+        }
+
+        .hero-subtitle {
+            color: #ccc;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        /* ----------------------------------------- */
+
+        /* Кнопки (те же, что и раньше, для единства стиля) */
+        .actions {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 15px;
-        }
-        .center-btn-container {
-            flex: 1;
-            text-align: center;
-            /* Этот margin-top приподнимает центральную кнопку, как ты просил */
-            margin-top: -10px; 
+            margin-top: 40px;
+            width: 100%;
         }
 
-        /* Обычные кнопки (плоские, не слипаются) */
         .btn-flat {
             padding: 14px 24px;
             background: #1a1a1a;
@@ -81,18 +101,17 @@
             transition: all 0.3s ease;
             border-radius: 8px;
             font-size: 14px;
-            min-width: 130px;
+            width: 100%;
+            max-width: 400px;
             text-align: center;
         }
         .btn-flat:hover {
             border-color: #FF5722;
             color: #FF5722;
             background: #222;
-            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
         }
 
-        /* Главная кнопка (Скачать лаунчер) */
-        .btn-main {
+        .btn-download {
             padding: 16px 32px;
             background: linear-gradient(135deg, #FF5722 0%, #FF8F32 100%);
             color: #000;
@@ -105,56 +124,61 @@
             border-radius: 50px;
             font-size: 16px;
             border: none;
-            min-width: 200px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
-        .btn-main:hover {
+        .btn-download:hover {
             transform: scale(1.05);
             box-shadow: 0 0 35px rgba(255, 87, 34, 0.8);
         }
 
-        /* Адаптив под телефон */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 14px;
+            margin-top: auto;
+            border-top: 1px solid #222;
+        }
+
         @media (max-width: 600px) {
-            .buttons-wrapper {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .group {
-                width: 100%;
-                justify-content: center;
-            }
-            .center-btn-container {
-                width: 100%;
-                margin-top: 20px; /* На мобильном убираем приподнимание, чтобы не было дыр */
-            }
-            .logo-big { font-size: 80px; }
-            h1 { font-size: 22px; }
+            .hero-title { font-size: 28px; }
+            .hero-overlay { padding: 15px; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo-big">E</div>
-        <h1>EVEREST ONLINE</h1>
-        <p class="subtitle">Криминальная Россия на твоём телефоне</p>
+
+    <div class="container">
+        <div class="hero-section">
+            
+            <!-- Блок с картинкой -->
+            <div class="hero-image-wrapper">
+                <!-- ВСТАВЛЯЕМ ТВОЮ ССЫЛКУ СЮДА В АТРИБУТ src -->
+                <img src="https://unlimbot.hb.ru-msk.vkcloud-storage.ru/image/4/019fb3cf-9544-7723-a46b-64149adf2299-9ba39ac2fad7459f86a22daa66839ecc.jpg" 
+                     alt="Атмосфера проекта Everest RP" 
+                     loading="lazy">
+            </div>
+
+            <!-- Текст поверх картинки (опционально) -->
+            <div class="hero-overlay">
+                <h1 class="hero-title">Everest RP</h1>
+                <p class="hero-subtitle">Погрузись в мир реалистичных ролевых игр. Выбери свою судьбу.</p>
+            </div>
+
+            <!-- Кнопки действий -->
+            <div class="actions">
+                <a href="pravila.html" class="btn-flat">Правила проекта</a>
+                <a href="donat.html" class="btn-flat">Донат</a>
+                <a href="launcher.apk" class="btn-download" download>Скачать лаунчер</a>
+            </div>
+        </div>
     </div>
 
-    <div class="buttons-wrapper">
-        <!-- Левая группа: Форум, Правила -->
-        <div class="group">
-            <a href="pravila.html" class="btn-flat">Форум</a>
-            <a href="pravila.html" class="btn-flat">Правила</a>
-        </div>
+    <footer>
+        &copy; 2026 EVEREST ONLINE. Все права защищены.
+    </footer>
 
-        <!-- Центр: Скачать лаунчер (чуть приподнят) -->
-        <div class="center-btn-container">
-            <a href="pravila.html" class="btn-main">Скачать лаунчер</a>
-        </div>
-
-        <!-- Правая группа: Донат, Контакты -->
-        <div class="group">
-            <a href="donat.html" class="btn-flat">Донат</a>
-            <a href="#" class="btn-flat">Контакты</a>
-        </div>
-    </div>
 </body>
 </html>
