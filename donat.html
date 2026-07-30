@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Донат | EVEREST ONLINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 {
+            font-size: 36px;
+            color: #FF5722;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .donate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #111;
+            padding: 30px;
+            border: 1px solid #333;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .price {
+            font-size: 32px;
+            color: #FF5722;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        .name {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .desc { color: #aaa; margin-bottom: 20px; line-height: 1.4; }
+
+        .btn {
+            padding: 14px 30px;
+            background: transparent;
+            border: 2px solid #FF5722;
+            color: #FF5722;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+        .btn:hover {
+            background: #FF5722;
+            color: #000;
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #aaa;
+            text-decoration: none;
+        }
+        .back-link:hover { color: #fff; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Назад на главную</a>
+        <h1>Донат</h1>
+
+        <div class="donate-grid">
+            <!-- Карточка 1 -->
+            <div class="card">
+                <div class="name">Blek Vip</div>
+                <div class="price">200₽</div>
+                <div class="desc">
+                    Базовый набор: уникальный титул, доступ к закрытому чату, приоритет в тикетах.
+                </div>
+                <!-- ВАЖНО: сюда админ даст ссылку на оплату. Пока стоит заглушка # -->
+                <a href="#" class="btn">Оплатить</a>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="card">
+                <div class="name">Vip</div>
+                <div class="price">100₽</div>
+                <div class="desc">
+                    Всё из бронзы + VIP-статус, 2x бонус игровой валюты, ранний доступ к обновлениям.
+                </div>
+                <a href="#" class="btn">Оплатить</a>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="card">
+                <div class="name">EvoKoin</div>
+                <div class="price">500₽=1.500EvoKoin</div>
+                <div class="desc">
+                    Всё из серебра + уникальный автомобиль, персональная роль, отдельный слот на сервере.
+                </div>
+                <a href="#" class="btn">Оплатить</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
