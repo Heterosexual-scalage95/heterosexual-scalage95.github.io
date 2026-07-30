@@ -37,16 +37,16 @@
             font-weight: bold;
         }
 
-        /* Блок действий - теперь кнопки стоят друг под другом, как на фото */
+        /* Блок действий — кнопки друг под другом */
         .actions {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px; /* Расстояние между кнопками */
+            gap: 15px;
             margin-top: 30px;
         }
 
-        /* Стиль обычной кнопки (как на главной) */
+        /* Обычная кнопка */
         .btn-flat {
             padding: 14px 24px;
             background: #1a1a1a;
@@ -59,8 +59,8 @@
             transition: all 0.3s ease;
             border-radius: 8px;
             font-size: 14px;
-            width: 100%;       /* Растягиваем на ширину контейнера, но высота нормальная */
-            max-width: 400px;  /* Чтобы на больших экранах не были бесконечными */
+            width: 100%;
+            max-width: 400px;
             text-align: center;
         }
         .btn-flat:hover {
@@ -70,7 +70,7 @@
             box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
         }
 
-        /* Главная кнопка (Скачать лаунчер) - акцентная */
+        /* Кнопка скачивания (акцентная) */
         .btn-download {
             padding: 16px 32px;
             background: linear-gradient(135deg, #FF5722 0%, #FF8F32 100%);
@@ -119,11 +119,11 @@
             <!-- Кнопка "На главную" -->
             <a href="index.html" class="btn-flat">← На главную</a>
             
-            <!-- Кнопка "Скачать лаунчер" (самая большая и яркая) -->
+            <!-- Кнопка "Скачать лаунчер" -->
             <a href="launcher.apk" class="btn-download" download>Скачать лаунчер</a>
             
-            <!-- Кнопка "Форум" -->
-            <a href="complaint.html"btn-flat">Жалоба на администрацию</a>
+            <!-- Кнопка "Жалоба на администрацию" — исправлена -->
+            <a href="complaint.html" class="btn-flat">Жалоба на администрацию</a>
         </div>
     </div>
 </body>
