@@ -14,68 +14,81 @@
             padding: 20px;
         }
         .container { max-width: 900px; margin: 0 auto; }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .back-link:hover { color: #fff; }
+
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             color: #FF5722;
             text-transform: uppercase;
             letter-spacing: 4px;
             margin-bottom: 30px;
             text-align: center;
         }
+
         .donate-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px; /* Большие отступы между карточками */
         }
+
         .card {
             background: #111;
             padding: 30px;
             border: 1px solid #333;
             border-radius: 12px;
             text-align: center;
+            transition: border-color 0.3s;
         }
-        .price {
-            font-size: 32px;
-            color: #FF5722;
-            font-weight: bold;
-            margin: 15px 0;
-        }
+        .card:hover { border-color: #FF5722; }
+
         .name {
-            font-size: 22px;
+            font-size: 20px;
             color: #fff;
             margin-bottom: 10px;
             text-transform: uppercase;
         }
-        .desc { color: #aaa; margin-bottom: 20px; line-height: 1.4; }
-
-        .btn {
-            padding: 14px 30px;
-            background: transparent;
-            border: 2px solid #FF5722;
+        .price {
+            font-size: 28px;
             color: #FF5722;
-            text-decoration: none;
             font-weight: bold;
+            margin: 10px 0;
+        }
+        .desc { 
+            color: #aaa; 
+            margin-bottom: 25px; 
+            line-height: 1.4; 
+            font-size: 14px;
+        }
+
+        .btn-flat-card {
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid #333;
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
             cursor: pointer;
             text-transform: uppercase;
             transition: all 0.3s ease;
             border-radius: 6px;
+            font-size: 13px;
         }
-        .btn:hover {
-            background: #FF5722;
-            color: #000;
-            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        .btn-flat-card:hover {
+            border-color: #FF5722;
+            color: #FF5722;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
         }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #aaa;
-            text-decoration: none;
-        }
-        .back-link:hover { color: #fff; }
 
         @media (max-width: 600px) {
-            h1 { font-size: 28px; }
+            h1 { font-size: 26px; }
         }
     </style>
 </head>
@@ -85,35 +98,34 @@
         <h1>Донат</h1>
 
         <div class="donate-grid">
-            <!-- Карточка 1 -->
+            <!-- Бронза -->
             <div class="card">
-                <div class="name">Blek Vip</div>
-                <div class="price">200₽</div>
+                <div class="name">Бронза</div>
+                <div class="price">100 ₽</div>
                 <div class="desc">
-                    Базовый набор: уникальный титул, доступ к закрытому чату, приоритет в тикетах.
+                    Уникальный титул, доступ к чату, приоритет в тикетах.
                 </div>
-                <!-- ВАЖНО: сюда админ даст ссылку на оплату. Пока стоит заглушка # -->
-                <a href="#" class="btn">Оплатить</a>
+                <a href="#" class="btn-flat-card">Оплатить</a>
             </div>
 
-            <!-- Карточка 2 -->
+            <!-- Серебро -->
             <div class="card">
-                <div class="name">Vip</div>
-                <div class="price">100₽</div>
+                <div class="name">Серебро</div>
+                <div class="price">300 ₽</div>
                 <div class="desc">
-                    Всё из бронзы + VIP-статус, 2x бонус игровой валюты, ранний доступ к обновлениям.
+                    Всё из бронзы + VIP-статус, 2x бонус валюты.
                 </div>
-                <a href="#" class="btn">Оплатить</a>
+                <a href="#" class="btn-flat-card">Оплатить</a>
             </div>
 
-            <!-- Карточка 3 -->
+            <!-- Золото -->
             <div class="card">
-                <div class="name">EvoKoin</div>
-                <div class="price">500₽=1.500EvoKoin</div>
+                <div class="name">Золото</div>
+                <div class="price">500 ₽</div>
                 <div class="desc">
-                    Всё из серебра + уникальный автомобиль, персональная роль, отдельный слот на сервере.
+                    Всё из серебра + уникальный авто, персональная роль.
                 </div>
-                <a href="#" class="btn">Оплатить</a>
+                <a href="#" class="btn-flat-card">Оплатить</a>
             </div>
         </div>
     </div>
