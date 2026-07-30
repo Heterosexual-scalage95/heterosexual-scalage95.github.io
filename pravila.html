@@ -15,7 +15,7 @@
         }
         .container { max-width: 900px; margin: 0 auto; }
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             color: #FF5722;
             text-transform: uppercase;
             letter-spacing: 4px;
@@ -23,9 +23,9 @@
             text-align: center;
         }
         p { color: #ccc; line-height: 1.6; margin-bottom: 15px; font-size: 16px; }
-        .rules-list { list-style: none; margin-bottom: 40px; }
+        .rules-list { list-style: none; margin-bottom: 30px; }
         .rules-list li {
-            padding: 12px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #222;
         }
         .rules-list li::before {
@@ -35,44 +35,47 @@
             font-weight: bold;
         }
 
+        /* Блок действий с отступами */
         .actions {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 15px; /* Расстояние между кнопками */
             margin-top: 30px;
         }
-        .btn {
-            padding: 14px 24px;
+
+        .btn-flat {
+            padding: 12px 24px;
             background: transparent;
-            border: 2px solid #FF5722;
-            color: #FF5722;
+            border: 1px solid #333;
+            color: #ccc;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            border-radius: 6px;
-            text-align: center;
-            flex: 1 1 200px;
+            border-radius: 8px;
+            font-size: 14px;
+            flex: 1 1 200px; /* Чтобы на мобильном были примерно одной ширины */
         }
-        .btn:hover {
-            background: #FF5722;
-            color: #000;
-            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        .btn-flat:hover {
+            border-color: #FF5722;
+            color: #FF5722;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
         }
+
         .btn-download {
             flex: 1 1 300px;
-            padding: 18px;
+            padding: 16px;
             background: #FF5722;
             color: #000;
             border: none;
             font-weight: bold;
             text-transform: uppercase;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 12px rgba(255, 87, 34, 0.4);
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
             border-radius: 50px;
-            text-align: center;
+            font-size: 16px;
         }
         .btn-download:hover {
             transform: scale(1.05);
@@ -80,9 +83,8 @@
         }
 
         @media (max-width: 600px) {
-            h1 { font-size: 28px; }
             .actions { flex-direction: column; }
-            .btn, .btn-download { width: 100%; }
+            .btn-flat, .btn-download { width: 100%; }
         }
     </style>
 </head>
@@ -98,15 +100,15 @@
             <li>Не мешайте игровому процессу других игроков.</li>
         </ul>
 
-        <p style="color: #888; margin-bottom: 20px;">
+        <p style="color: #888; margin-bottom: 20px; text-align: center;">
             Ознакомление с правилами обязательно перед началом игры.
         </p>
 
         <div class="actions">
-            <a href="index.html" class="btn">← На главную</a>
-            <!-- ВАЖНО: launcher.apk должен лежать рядом с этим файлом в репозитории -->
-            <a href="launcher.apk" class="btn btn-download" download>Скачать лаунчер</a>
-            <a href="forum.html" class="btn">Форум</a>
+            <a href="index.html" class="btn-flat">← На главную</a>
+            <!-- Ссылка на файл launcher.apk -->
+            <a href="launcher.apk" class="btn-download" download>Скачать лаунчер</a>
+            <a href="forum.html" class="btn-flat">Форум</a>
         </div>
     </div>
 </body>
