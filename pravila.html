@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила | EVEREST ONLINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 36px;
+            color: #FF5722;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        .rules-list {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        .rules-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+        .rules-list li::before {
+            content: "•";
+            color: #FF5722;
+            margin-right: 12px;
+            font-weight: bold;
+        }
 
+        /* Блок кнопок */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            background: transparent;
+            border: 2px solid #FF5722;
+            color: #FF5722;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            text-align: center;
+            flex: 1 1 200px; /* чтобы на телефоне были примерно одинаковые по ширине */
+        }
+        .btn:hover {
+            background: #FF5722;
+            color: #000;
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        }
+
+        .btn-download {
+            flex: 1 1 300px;
+            padding: 18px;
+            background: #FF5722;
+            color: #000;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 12px rgba(255, 87, 34, 0.4);
+            border-radius: 50px;
+            text-align: center;
+        }
+        .btn-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 87, 34, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 28px; }
+            .actions { flex-direction: column; }
+            .btn, .btn-download { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Правила проекта</h1>
+
+        <ul class="rules-list">
+            <li>Запрещено использование читов и стороннего ПО.</li>
+            <li>Оскорбления игроков и администрации — бан.</li>
+            <li>Реклама сторонних проектов — бан.</li>
+            <li>Продажа/покупка игровой валюты за реальные деньги — бан.</li>
+            <li>Не мешайте игровому процессу других игроков.</li>
+        </ul>
+
+        <p style="color: #888; margin-bottom: 20px;">
+            Ознакомление с правилами обязательно перед началом игры.
+        </p>
+
+        <!-- Кнопки действий -->
+        <div class="actions">
+            <!-- Кнопка НАЗАД на главную -->
+            <a href="index.html" class="btn">← На главную</a>
+
+            <!-- ГЛАВНАЯ КНОПКА: СКАЧАТЬ ЛАУНЧЕР -->
+            <!-- ВАЖНО: вместо 'launcher.apk' поставь реальное имя файла, который зальёшь в репозиторий -->
+            <a href="launcher.apk" class="btn btn-download" download>Скачать лаунчер</a>
+
+            <!-- Доп. кнопка (например, форум) -->
+            <a href="#" class="btn">Форум</a>
+        </div>
+    </div>
+
+</body>
+</html>
