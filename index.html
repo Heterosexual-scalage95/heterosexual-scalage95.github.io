@@ -17,89 +17,109 @@
         }
         .header {
             width: 100%;
-            padding: 20px 0;
+            padding: 40px 20px;
             text-align: center;
         }
         .logo-big {
-            font-size: 130px;
+            font-size: 120px;
             font-weight: 900;
             color: #FF5722;
             line-height: 0.9;
             text-transform: uppercase;
-            letter-spacing: -8px;
+            letter-spacing: -5px;
             filter: drop-shadow(0 0 15px rgba(255, 87, 34, 0.6));
         }
         h1 {
-            font-size: 32px;
+            font-size: 28px;
             color: #ffffff;
-            margin-top: 5px;
+            margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 4px;
         }
         p.subtitle {
             color: #999;
-            margin-top: 8px;
-            font-size: 16px;
+            margin-top: 10px;
+            font-size: 15px;
         }
 
+        /* Контейнер для кнопок */
         .buttons-wrapper {
             width: 100%;
             max-width: 900px;
-            padding: 40px 20px;
+            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px; /* Отступы между группами кнопок */
         }
-        .left-group, .right-group {
+
+        /* Группы кнопок */
+        .group {
             display: flex;
-            gap: 10px;
+            gap: 15px; /* Расстояние между соседними кнопками */
         }
+        
         .center-btn-container {
             flex: 1;
             text-align: center;
         }
 
-        .btn {
-            padding: 14px 24px;
+        /* Стиль обычной кнопки */
+        .btn-flat {
+            padding: 12px 24px;
             background: transparent;
-            border: 2px solid #FF5722;
+            border: 1px solid #333;
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .btn-flat:hover {
+            border-color: #FF5722;
             color: #FF5722;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+        }
+
+        /* Стиль центральной кнопки (Скачать лаунчер) */
+        .btn-main {
+            padding: 16px 32px;
+            background: #FF5722;
+            color: #000;
             text-decoration: none;
             font-weight: bold;
             cursor: pointer;
             text-transform: uppercase;
-            transition: all 0.3s ease;
-            border-radius: 6px;
-        }
-        .btn:hover {
-            background: #FF5722;
-            color: #000;
-            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
-        }
-
-        .btn-center {
-            padding: 18px 40px;
-            background: #FF5722;
-            color: #000;
-            border: none;
-            font-weight: bold;
-            text-transform: uppercase;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 12px rgba(255, 87, 34, 0.4);
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
             border-radius: 50px;
+            font-size: 16px;
+            border: none;
         }
-        .btn-center:hover {
+        .btn-main:hover {
             transform: scale(1.05);
             box-shadow: 0 0 25px rgba(255, 87, 34, 0.8);
         }
 
         @media (max-width: 600px) {
-            .buttons-wrapper { flex-direction: column; align-items: stretch; }
-            .left-group, .right-group, .center-btn-container { width: 100%; justify-content: center; }
-            .logo-big { font-size: 90px; }
-            h1 { font-size: 24px; }
+            .buttons-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .group {
+                width: 100%;
+                justify-content: center;
+            }
+            .center-btn-container {
+                width: 100%;
+                margin-top: 15px;
+            }
+            .logo-big { font-size: 80px; }
+            h1 { font-size: 22px; }
         }
     </style>
 </head>
@@ -107,22 +127,25 @@
     <div class="header">
         <div class="logo-big">E</div>
         <h1>EVEREST ONLINE</h1>
-        <p class="subtitle">Криминальная Россия на твоём телефоне.</p>
+        <p class="subtitle">Криминальная Россия на твоём телефоне</p>
     </div>
 
     <div class="buttons-wrapper">
-        <div class="left-group">
-            <a href="forum.html" class="btn">Форум</a>
-            <a href="pravila.html" class="btn">Правила</a>
+        <!-- Левая группа: Форум, Правила -->
+        <div class="group">
+            <a href="forum.html" class="btn-flat">Форум</a>
+            <a href="pravila.html" class="btn-flat">Правила</a>
         </div>
 
+        <!-- Центр: Скачать лаунчер -->
         <div class="center-btn-container">
-            <a href="pravila.html" class="btn btn-center">Скачать лаунчер</a>
+            <a href="pravila.html" class="btn-main">Скачать лаунчер</a>
         </div>
 
-        <div class="right-group">
-            <a href="donat.html" class="btn">Донат</a>
-            <a href="contact.html" class="btn">Контакты</a>
+        <!-- Правая группа: Донат, Контакты -->
+        <div class="group">
+            <a href="donat.html" class="btn-flat">Донат</a>
+            <a href="contact.html" class="btn-flat">Контакты</a>
         </div>
     </div>
 </body>
