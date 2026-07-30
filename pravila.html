@@ -14,6 +14,7 @@
             padding: 20px;
         }
         .container { max-width: 900px; margin: 0 auto; }
+        
         h1 {
             font-size: 32px;
             color: #FF5722;
@@ -23,6 +24,7 @@
             text-align: center;
         }
         p { color: #ccc; line-height: 1.6; margin-bottom: 15px; font-size: 16px; }
+        
         .rules-list { list-style: none; margin-bottom: 30px; }
         .rules-list li {
             padding: 10px 0;
@@ -35,18 +37,19 @@
             font-weight: bold;
         }
 
-        /* Блок действий с отступами */
+        /* Блок действий - теперь кнопки стоят друг под другом, как на фото */
         .actions {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 15px; /* Расстояние между кнопками */
             margin-top: 30px;
         }
 
+        /* Стиль обычной кнопки (как на главной) */
         .btn-flat {
-            padding: 12px 24px;
-            background: transparent;
+            padding: 14px 24px;
+            background: #1a1a1a;
             border: 1px solid #333;
             color: #ccc;
             text-decoration: none;
@@ -56,35 +59,43 @@
             transition: all 0.3s ease;
             border-radius: 8px;
             font-size: 14px;
-            flex: 1 1 200px; /* Чтобы на мобильном были примерно одной ширины */
+            width: 100%;       /* Растягиваем на ширину контейнера, но высота нормальная */
+            max-width: 400px;  /* Чтобы на больших экранах не были бесконечными */
+            text-align: center;
         }
         .btn-flat:hover {
             border-color: #FF5722;
             color: #FF5722;
+            background: #222;
             box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
         }
 
+        /* Главная кнопка (Скачать лаунчер) - акцентная */
         .btn-download {
-            flex: 1 1 300px;
-            padding: 16px;
-            background: #FF5722;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #FF5722 0%, #FF8F32 100%);
             color: #000;
-            border: none;
+            text-decoration: none;
             font-weight: bold;
+            cursor: pointer;
             text-transform: uppercase;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 0 15px rgba(255, 87, 34, 0.4);
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
             border-radius: 50px;
             font-size: 16px;
+            border: none;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
         .btn-download:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(255, 87, 34, 0.8);
+            box-shadow: 0 0 35px rgba(255, 87, 34, 0.8);
         }
 
         @media (max-width: 600px) {
-            .actions { flex-direction: column; }
-            .btn-flat, .btn-download { width: 100%; }
+            h1 { font-size: 26px; }
+            .actions { width: 100%; }
         }
     </style>
 </head>
@@ -105,10 +116,14 @@
         </p>
 
         <div class="actions">
+            <!-- Кнопка "На главную" -->
             <a href="index.html" class="btn-flat">← На главную</a>
-            <!-- Ссылка на файл launcher.apk -->
+            
+            <!-- Кнопка "Скачать лаунчер" (самая большая и яркая) -->
             <a href="launcher.apk" class="btn-download" download>Скачать лаунчер</a>
-            <a href="forum.html" class="btn-flat">Форум</a>
+            
+            <!-- Кнопка "Форум" -->
+            <a href="#" class="btn-flat">Форум</a>
         </div>
     </div>
 </body>
