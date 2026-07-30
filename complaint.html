@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жалоба на администрацию | EVEREST ONLINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; width: 100%; }
+        
+        /* Шапка */
+        h1 {
+            font-size: 32px;
+            color: #FF5722;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        p.desc {
+            color: #888;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Стили формы */
+        .form-group { margin-bottom: 20px; }
+        
+        label {
+            display: block;
+            color: #aaa;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 14px 20px; /* Тот же размер, что и у кнопок */
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: #FF5722;
+            background: #222;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        /* Блок кнопок внизу */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Кнопка Назад (серая) */
+        .btn-flat {
+            padding: 14px 24px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .btn-flat:hover {
+            border-color: #FF5722;
+            color: #FF5722;
+            background: #222;
+        }
+
+        /* Кнопка Отправить (оранжевая) */
+        .btn-submit {
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #FF5722 0%, #FF8F32 100%);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+            border-radius: 50px;
+            font-size: 16px;
+            border: none;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .btn-submit:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(255, 87, 34, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 14px;
+            margin-top: auto;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Жалоба на администрацию</h1>
+        <p class="desc">
+            Заполните форму ниже, чтобы сообщить о нарушении со стороны администрации.<br>
+            Все поля обязательны для заполнения.
+        </p>
+
+        <!-- Форма жалобы -->
+        <form action="#" method="POST">
+            
+            <!-- Ник администратора -->
+            <div class="form-group">
+                <label for="adminNick">Никнейм администратора ✍️</label>
+                <input type="text" id="adminNick" name="adminNick" placeholder="Например: Admin_Ivan" required>
+            </div>
+
+            <!-- Причина -->
+            <div class="form-group">
+                <label for="reason">Причина жалобы ✍️</label>
+                <input type="text" id="reason" name="reason" placeholder="Например: Необоснованный бан, оскорбление" required>
+            </div>
+
+            <!-- Доказательства -->
+            <div class="form-group">
+                <label for="evidence">Доказательства (ссылка)🔗/label>
+                <textarea id="evidence" name="evidence" placeholder="Вставьте ссылку на скриншот, видео или подробно опишите ситуацию..." required></textarea>
+            </div>
+
+            <!-- Кнопки действий -->
+            <div class="actions">
+                <a href="index.html" class="btn-flat">← На главную</a>
+                <button type="submit" class="btn-submit">Отправить жалобу</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 EVEREST ONLINE. Все права защищены.
+    </footer>
+</body>
+</html>
