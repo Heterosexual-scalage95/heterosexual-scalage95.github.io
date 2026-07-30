@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | EVEREST ONLINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; width: 100%; }
+        
+        h1 {
+            font-size: 32px;
+            color: #FF5722;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        p.desc {
+            text-align: center;
+            color: #888;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Блок с контактами (почта, ссылки) */
+        .contact-info {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-info p { margin: 8px 0; }
+        .email-link {
+            color: #FF5722;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .email-link:hover { color: #FF8F32; }
+
+        /* Стили формы */
+        .form-group { margin-bottom: 20px; }
+        label {
+            display: block;
+            color: #aaa;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 14px 20px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #FF5722;
+            background: #222;
+            box-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
+        }
+        textarea { resize: vertical; min-height: 150px; font-family: inherit; }
+
+        /* Кнопки */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn-flat {
+            padding: 14px 24px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .btn-flat:hover {
+            border-color: #FF5722;
+            color: #FF5722;
+            background: #222;
+        }
+        .btn-submit {
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #FF5722 0%, #FF8F32 100%);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.5);
+            border-radius: 50px;
+            font-size: 16px;
+            border: none;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .btn-submit:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 35px rgba(255, 87, 34, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 14px;
+            margin-top: auto;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Контакты</h1>
+        <p class="desc">
+            Есть вопрос, предложение или баг? Напиши нам — мы обязательно ответим.
+        </p>
+
+        <!-- Блок с почтой (чтобы можно было просто скопировать или кликнуть) -->
+        <div class="contact-info">
+            <p>📧 Почта для связи:</p>
+            <p><a href="mailto:rpeverest7@gmail.com" class="email-link">rpeverest7@gmail.com</a></p>
+            <p style="color: #666; font-size: 13px;">
+                Это самый быстрый способ: письмо сразу попадает в ящик.
+            </p>
+        </div>
+
+        <!-- Форма обратной связи -->
+        <!-- ВАЖНО: ниже в action="" нужно вставить ссылку от Formspree -->
+        <form action="https://formspree.io/f/твой_код" method="POST">
+            <div class="form-group">
+                <label for="name">Ваше имя ✍️</label>
+                <input type="text" id="name" name="name" placeholder="Например: Иван" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Ваш Email ✍️</label>
+                <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Сообщение ✍️</label>
+                <textarea id="message" name="message" placeholder="Опиши проблему или вопрос..." required></textarea>
+            </div>
+
+            <div class="actions">
+                <a href="index.html" class="btn-flat">← На главную</a>
+                <button type="submit" class="btn-submit">Отправить сообщение</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2026 EVEREST ONLINE. Все права защищены.
+    </footer>
+</body>
+</html>
