@@ -42,7 +42,6 @@
             font-size: 16px;
         }
 
-        /* Блок с кнопками */
         .buttons-wrapper {
             width: 100%;
             max-width: 900px;
@@ -53,18 +52,10 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-
-        /* Левые кнопки */
-        .left-group {
+        .left-group, .right-group {
             display: flex;
             gap: 10px;
         }
-        /* Правые кнопки */
-        .right-group {
-            display: flex;
-            gap: 10px;
-        }
-        /* Центральная кнопка */
         .center-btn-container {
             flex: 1;
             text-align: center;
@@ -105,45 +96,34 @@
         }
 
         @media (max-width: 600px) {
-            .buttons-wrapper {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .left-group, .right-group, .center-btn-container {
-                width: 100%;
-                justify-content: center;
-            }
+            .buttons-wrapper { flex-direction: column; align-items: stretch; }
+            .left-group, .right-group, .center-btn-container { width: 100%; justify-content: center; }
             .logo-big { font-size: 90px; }
             h1 { font-size: 24px; }
         }
     </style>
 </head>
 <body>
-
     <div class="header">
         <div class="logo-big">E</div>
         <h1>EVEREST ONLINE</h1>
-        <p class="subtitle">Проект нового уровня. Стиль. Скорость. Контроль.</p>
+        <p class="subtitle">Криминальная Россия на твоём телефоне.</p>
     </div>
 
     <div class="buttons-wrapper">
-        <!-- 2 кнопки слева -->
         <div class="left-group">
-            <a href="#" class="btn">Форум</a>
-            <a href="#" class="btn">Правила</a>
+            <a href="forum.html" class="btn">Форум</a>
+            <a href="pravila.html" class="btn">Правила</a>
         </div>
 
-        <!-- Центральная кнопка -->
         <div class="center-btn-container">
-            <a href="#" class="btn btn-center">Скачать лаунчер</a>
+            <a href="pravila.html" class="btn btn-center">Скачать лаунчер</a>
         </div>
 
-        <!-- 2 кнопки справа -->
         <div class="right-group">
-            <a href="#" class="btn">Донат</a>
-            <a href="#" class="btn">Контакты</a>
+            <a href="donat.html" class="btn">Донат</a>
+            <a href="contact.html" class="btn">Контакты</a>
         </div>
     </div>
-
 </body>
 </html>
