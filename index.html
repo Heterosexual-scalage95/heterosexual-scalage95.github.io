@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVEREST ONLINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .logo-big {
+            font-size: 130px;
+            font-weight: 900;
+            color: #FF5722;
+            line-height: 0.9;
+            text-transform: uppercase;
+            letter-spacing: -8px;
+            filter: drop-shadow(0 0 15px rgba(255, 87, 34, 0.6));
+        }
+        h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        p.subtitle {
+            color: #999;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        /* Блок с кнопками */
+        .buttons-wrapper {
+            width: 100%;
+            max-width: 900px;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        /* Левые кнопки */
+        .left-group {
+            display: flex;
+            gap: 10px;
+        }
+        /* Правые кнопки */
+        .right-group {
+            display: flex;
+            gap: 10px;
+        }
+        /* Центральная кнопка */
+        .center-btn-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 14px 24px;
+            background: transparent;
+            border: 2px solid #FF5722;
+            color: #FF5722;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+        }
+        .btn:hover {
+            background: #FF5722;
+            color: #000;
+            box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+        }
+
+        .btn-center {
+            padding: 18px 40px;
+            background: #FF5722;
+            color: #000;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 0 12px rgba(255, 87, 34, 0.4);
+            border-radius: 50px;
+        }
+        .btn-center:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 87, 34, 0.8);
+        }
+
+        @media (max-width: 600px) {
+            .buttons-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .left-group, .right-group, .center-btn-container {
+                width: 100%;
+                justify-content: center;
+            }
+            .logo-big { font-size: 90px; }
+            h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-big">E</div>
+        <h1>EVEREST ONLINE</h1>
+        <p class="subtitle">Проект нового уровня. Стиль. Скорость. Контроль.</p>
+    </div>
+
+    <div class="buttons-wrapper">
+        <!-- 2 кнопки слева -->
+        <div class="left-group">
+            <a href="#" class="btn">Форум</a>
+            <a href="#" class="btn">Правила</a>
+        </div>
+
+        <!-- Центральная кнопка -->
+        <div class="center-btn-container">
+            <a href="#" class="btn btn-center">Скачать лаунчер</a>
+        </div>
+
+        <!-- 2 кнопки справа -->
+        <div class="right-group">
+            <a href="#" class="btn">Донат</a>
+            <a href="#" class="btn">Контакты</a>
+        </div>
+    </div>
+
+</body>
+</html>
